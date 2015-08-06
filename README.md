@@ -6,4 +6,6 @@ The server.js file contains the required libraries as well as assigns the server
 
 For now, there is no data being stored in a database. Each request directly queries the EnergyStar API. The problem is that some of these JSONs are very large and therefore loading times can be slow. Eventually, I want to pull the data and store it in a database which will be updated whenever EnergyStar updates its list of appliances. This will allow me to control how much data gets loaded depending on how many results the user wants to see at once and will probably allow for much faster loading time. 
 
+To run the code base, clone this repo, run 'npm install' and 'npm install request', then run 'node server.js' and point your browser to 'localhost:3000'. 
+
 
