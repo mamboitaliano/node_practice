@@ -18,13 +18,13 @@ var server = app.listen(3000, function() {
   console.log("Express running on port 3000");
 });
 
-var dishwashers = "https://data.energystar.gov/resource/energy-star-certified-residential-dishwashers.json"
-var pass_this_to_router = undefined;
-request(dishwashers, function (error, response, dishwasher_list) {
-  if (!error && response.statusCode == 200) {
-    pass_this_to_router = dishwasher_list;
-    console.log(dishwasher_list);
-  }
-})
+// var dishwashers = "https://data.energystar.gov/resource/energy-star-certified-residential-dishwashers.json"
+// var pass_this_to_router = undefined;
+// request(dishwashers, function (error, response, dishwasher_list) {
+//   if (!error && response.statusCode == 200) {
+//     pass_this_to_router = dishwasher_list;
+//     console.log(dishwasher_list);
+//   }
+// })
 
 
