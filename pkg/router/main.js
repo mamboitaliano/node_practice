@@ -25,7 +25,7 @@ module.exports = function(app) {
     	request(washing_machines, function (error, response, list) {
     		if (!error && response.statusCode == 200) {
     			formatted_list = (JSON.parse(list));
-    			washing_machine_list = list;
+    			washing_machine_list = formatted_list;
     		}
     		res.render('washing_machines', {list: washing_machine_list});
     	})
@@ -39,7 +39,7 @@ module.exports = function(app) {
     	request(displays, function (error, response, list) {
     		if (!error && response.statusCode == 200) {
     			formatted_list = (JSON.parse(list));
-    			display_list = list;
+    			display_list = formatted_list;
     		}
     		res.render('displays', {list: display_list});
     	})
@@ -53,7 +53,7 @@ module.exports = function(app) {
     	request(audio_video, function (error, response, list) {
     		if (!error && response.statusCode == 200) {
     			formatted_list = (JSON.parse(list));
-    			audio_video_list = list;
+    			audio_video_list = formatted_list;
     		}
     		res.render('audio_video', {list: audio_video_list});
     	})
@@ -67,7 +67,7 @@ module.exports = function(app) {
     	request(water_heaters, function (error, response, list) {
     		if (!error && response.statusCode == 200) {
     			formatted_list = (JSON.parse(list));
-    			water_heater_list = list;
+    			water_heater_list = formatted_list;
     		}
     		res.render('water_heaters', {list: water_heater_list});
     	})
@@ -81,7 +81,7 @@ module.exports = function(app) {
     	request(refrigerators, function (error, response, list) {
     		if (!error && response.statusCode == 200) {
     			formatted_list = (JSON.parse(list));
-    			refrigerator_list = list;
+    			refrigerator_list = formatted_list;
     		}
     		res.render('refrigerators', {list: refrigerator_list});
     	})
@@ -95,7 +95,7 @@ module.exports = function(app) {
     	request(freezers, function (error, response, list) {
     		if (!error && response.statusCode == 200) {
     			formatted_list = (JSON.parse(list));
-    			freezer_list = list;
+    			freezer_list = formatted_list;
     		}
     		res.render('freezers', {list: freezer_list});
     	})
