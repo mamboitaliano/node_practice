@@ -4,3 +4,7 @@ https://codeforgeek.com/2014/06/express-nodejs-tutorial/
 
 Express tutorial
 https://codeforgeek.com/2014/06/express-nodejs-tutorial/
+
+Some resources used:
+https://github.com/request/request
+http://underscorejs.org/#template
