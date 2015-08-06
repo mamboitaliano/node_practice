@@ -10,7 +10,7 @@ module.exports = function(app) {
     	request(dishwashers, function (error, response, list) {
     		if (!error && response.statusCode == 200) {
     			console.log(list); // print energystar dishwasher list json to console
-    			dishlist = list;
+    			dishlist = JSON.parse(list[1].markets);
     		}
     	})
     	res.render('dishwashers', {list: dishlist});
