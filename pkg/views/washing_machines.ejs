@@ -7,7 +7,11 @@
   <h1>EnergyStar Certified Residential Washing Machines</h1>
 
   <div>
-    <%= list %>
+  	<ul> <% for (var i = 0; i < list.length; i++) { %>
+  		<li> <%= list[i].brand_name %> </li>
+  		<p> <%= list[i].model_number %> </p>
+  		<% } %>
+  	</ul>
   </div>
 
 </body>

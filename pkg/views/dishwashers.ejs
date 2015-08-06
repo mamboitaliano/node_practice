@@ -6,10 +6,12 @@
 
   <h1>EnergyStar Certified Residential Dishwashers</h1>
 
-  <div>
-  	<% for(var i=0; i<list.length; i++) {%>
-  		<li><%= list[i].brand_name %></li>
-  	<% } %>
+  <div> 
+  	<ul> <% for (var i = 0; i < list.length; i++) { %>
+  		<li> <%= list[i].brand_name %> </li>
+  		<p> <%= list[i].model_number %> </p>
+  		<% } %>
+  	</ul>
   </div>
 
 </body>
