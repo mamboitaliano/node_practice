@@ -1,4 +1,4 @@
-@import "compass/css3";
+/*@import "compass/css3";*/
 
 @import url("http://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
@@ -41,80 +41,49 @@ $gray: #EEE;
   color: $blue;
 }
 
-.dropdown {
-	a {
-		text-decoration: none;
-	}
-
-	[data-toggle="dropdown"] {
-		position: relative;
-		display: block;
-		color: white;
-		background: $blue;
-		@include double-shadow($blue);
-		@include hover-style($blue);
-		@include text-shadow(0 -1px 0 rgba(0,0,0,0.3));
-		padding: 10px;
-
-	}
-	.icon-arrow {
-		position: absolute;
-		display: block;
-		font-size: 0.7em;
-		color: #fff;
-		top: 14px;
-		right: 10px;
-
-		&.open {
-			@include transform(rotate(-180deg));
-			@include transition(transform .6s);
-		}
-		&.close {
-			@include transform(rotate(0deg));
-			@include transition(transform .6s);
-		}
-
-		&:before {
-			content: '\25BC';
-		}
-	}
-
-	.dropdown-menu {
-		max-height: 0;
-		overflow: hidden;
-		@include ul-nostyle;
-
-		li {
-			padding: 0;
-
-			a {
-				display: block;
-				color: darken($gray, 50%);
-				background: $gray;
-				@include double-shadow($gray);
-				@include hover-style($gray);
-				@include text-shadow(0 -1px 0 rgba(255,255,255,0.3));
-				padding: 10px 10px;
-			}
-		}
-	}
-
-	.show, .hide {
-		@include transform-origin(50%, 0%);
-	}
-
-	.show {
-		display: block;
-		max-height: 9999px;
-		@include transform(scaleY(1));
-		@include animation(showAnimation .5s ease-in-out);
-		@include transition(max-height 1s ease-in-out);
-	}
-
-	.hide {
-		max-height: 0;
-		@include transform(scaleY(0));
-		@include animation(hideAnimation .4s ease-out);
-		@include transition(max-height .6s ease-out);
-	}
+body {
+	background-color: gray;
 }
+
+h1 {
+	color: white;
+}
+
+.home_button {
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 70px;
+  height: 30px;
+}
+
+.home_button p {
+  color: white;
+  font-size: 12px;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.main_menu {
+  border: 1px solid white;
+  position: absolute;
+  left: 10px;
+}
+
+.list_container h3 {
+  border: 1px solid white;
+  width: 200px;
+  height: 5%;
+  text-align: left;
+}
+
+
+
+
+

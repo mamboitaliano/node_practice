@@ -1,5 +1,7 @@
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css">
+  <script type="text/javascript" src="public/javascripts/application.js"></script>
   <title>Efficiency List</title>
 </head>
 <body>
@@ -10,9 +12,12 @@
   	<ul> <% for (var i = 0; i < list.length; i++) { %>
   		<li> <%= list[i].brand_name %> </li>
   		<p> <%= list[i].model_number %> </p>
+  		<p> Avg. annual energy use (kwh/year): <%= list[i].annual_energy_use_kwh_year%></p>
   		<% } %>
   	</ul>
   </div>
+
+  <div class="home_button">home</div>
 
 </body>
 </html>

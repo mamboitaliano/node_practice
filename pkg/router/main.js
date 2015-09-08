@@ -1,11 +1,19 @@
 module.exports = function(app) {
 	var request = require('request');
+    
 	app.get('/', function(req, res) {
-    	res.render('index');
+    	console.log("home route is getting hit");
+        res.render('index');ls
     });
+
+    app.get('/about', function(req, res) {
+        console.log("about route getting hit");
+        res.render('about');
+    });
+
     app.get('/dishwashers', function(req, res) {
     	var dishwashers = "https://data.energystar.gov/resource/energy-star-certified-residential-dishwashers.json";
-    	console.log("dishwasher route getting hit")
+    	console.log("dishwasher route getting hit");
     	var dishlist = undefined;
     	request(dishwashers, function (error, response, list) {
     		if (!error && response.statusCode == 200) {
@@ -15,7 +23,6 @@ module.exports = function(app) {
     		}
     		res.render('dishwashers', {list: dishlist});
     	})
-    	
     });
 
     app.get('/washing_machines', function(req, res) {
@@ -29,7 +36,6 @@ module.exports = function(app) {
     		}
     		res.render('washing_machines', {list: washing_machine_list});
     	})
-    	// why isn't this getting passed to washing_machines.ejs?
     });
 
     app.get('/displays', function(req, res) {
@@ -43,7 +49,6 @@ module.exports = function(app) {
     		}
     		res.render('displays', {list: display_list});
     	})
-    	// why isn't this getting passed to dishwashers.ejs?
     });
 
     app.get('/audio_video', function(req, res) {
@@ -57,7 +62,6 @@ module.exports = function(app) {
     		}
     		res.render('audio_video', {list: audio_video_list});
     	})
-    	// why isn't this getting passed to dishwashers.ejs?
     });
 
     app.get('/water_heaters', function(req, res) {
@@ -71,7 +75,6 @@ module.exports = function(app) {
     		}
     		res.render('water_heaters', {list: water_heater_list});
     	})
-    	// why isn't this getting passed to dishwashers.ejs?
     });
 
     app.get('/refrigerators', function(req, res) {
@@ -85,7 +88,6 @@ module.exports = function(app) {
     		}
     		res.render('refrigerators', {list: refrigerator_list});
     	})
-    	// why isn't this getting passed to dishwashers.ejs?
     });
 
     app.get('/freezers', function(req, res) {
@@ -99,7 +101,5 @@ module.exports = function(app) {
     		}
     		res.render('freezers', {list: freezer_list});
     	})
-    	// why isn't this getting passed to dishwashers.ejs?
     });
-
 }
