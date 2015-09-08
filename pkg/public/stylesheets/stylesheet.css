@@ -15,34 +15,20 @@ body {
 .container {
 	width: 350px;
 	margin: 50px auto;
-  
-  & > ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px 0;
   }
-}
 
-$blue: #2980B9;
-$gray: #EEE;
 
-@mixin ul-nostyle {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-.title {
+.header-title h1 {
   font-family: 'Pacifico';
-  font-weight: norma;
+  /*font-weight: normal;*/
   font-size: 40px;
   text-align: center;
   line-height: 1.4;
-  color: $blue;
+  color: black;
 }
 
 body {
-	background-color: gray;
+	background-color: white;
 }
 
 h1 {
@@ -71,16 +57,25 @@ h1 {
 }
 
 .main_menu {
-  border: 1px solid white;
+  /*border: 1px solid black;*/
   position: absolute;
   left: 10px;
 }
 
+.list_container {
+  /*border: 1px solid black;*/
+  position: relative;
+}
+
 .list_container h3 {
-  border: 1px solid white;
+  /*border: 1px solid black;*/
   width: 200px;
-  height: 5%;
-  text-align: left;
+  height: 7%;
+  position: relative;
+  top: 13px;
+  font-family: 'Pacifico';
+  font-weight: normal;
+  font-size: 30px;
 }
 
 
